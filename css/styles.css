@@ -599,15 +599,15 @@ body {
   color: #2e2f42;
 }
 @media screen and (min-width: 768px) {
-  .pfoto-portfolio,
-  .text-portfolio {
+  .item-portfolio {
     flex-basis: calc((100% - 24px) / 2);
   }
 
   .list-portfolio {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 72px 24px;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 @media screen and (min-width: 1158px) {
