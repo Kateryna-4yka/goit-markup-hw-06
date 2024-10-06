@@ -791,7 +791,7 @@ body {
   }
   .footer-content {
     justify-content: center;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 0px;
     flex-wrap: nowrap;
   }
