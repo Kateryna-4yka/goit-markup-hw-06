@@ -112,6 +112,7 @@ a {
 .burger-icon {
   display: block;
   fill: #2f2f37;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
@@ -335,8 +336,9 @@ body {
   .page-title {
     margin-bottom: 48px;
   }
+
   .section {
-    padding: 188px 0;
+    padding: 120px 0;
   }
 }
 
@@ -629,7 +631,9 @@ body {
 /*====================footer====================*/
 .page-footer {
   background-color: #2e2f42;
-  padding: 96px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-content {
@@ -751,12 +755,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .page-footer {
-    padding-left: 108px;
-    justify-content: center;
-    align-items: center;
-  }
-
   .footer-content {
     column-gap: 24px;
     row-gap: 72px;
@@ -788,12 +786,12 @@ body {
 }
 @media screen and (min-width: 1158px) {
   .page-footer {
-    padding: 100px 156px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
-
   .footer-content {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 0px;
     flex-wrap: nowrap;
   }
