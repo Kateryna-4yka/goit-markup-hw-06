@@ -66,3 +66,67 @@ document.addEventListener('keydown', (event) => {
         document.body.style.overflow = '';    
     }
 });
+
+
+// ========================свайпер
+document.addEventListener("DOMContentLoaded", function () {
+    let swiperInstance = null;
+  
+    function checkSwiper() {
+      const teamSwiper = document.querySelector(".team-swiper");
+  
+      if (window.innerWidth < 1157) {
+        if (!swiperInstance) {
+          swiperInstance = new Swiper(teamSwiper, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+              768: { slidesPerView: 2 },
+            },
+          });
+        }
+      } else {
+        if (swiperInstance) {
+          swiperInstance.destroy(true, true);
+          swiperInstance = null;
+        }
+      }
+    }
+  
+    checkSwiper();
+    window.addEventListener("resize", checkSwiper);
+  });
+  
+
+  
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-link");
+  
+    // Перевіряємо, чи вже є клас "current" на одній з лінок при завантаженні сторінки
+    navLinks.forEach(link => {
+      if (link.classList.contains("current")) {
+        link.classList.add("current"); // Переконуємось, що клас "current" збережений
+      }
+    });
+  
+    // Додаємо слухач подій на кожну лінку
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault(); // Скасовуємо стандартну поведінку переходу за посиланням
+  
+        // Видаляємо клас "current" з усіх лінок
+        navLinks.forEach(l => l.classList.remove("current"));
+  
+        // Додаємо клас "current" до натиснутої лінки
+        link.classList.add("current");
+      });
+    });
+  });
+

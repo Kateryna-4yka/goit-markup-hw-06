@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
 
   <body>
@@ -128,10 +129,14 @@
       </section>
 
       <section class="section team">
-        <div class="container">
+      <div class="container">
           <h2 class="title-team">Our Team</h2>
-          <ul class="list-team">
-            <li class="item-team">
+
+        <div class="swiper-container team-swiper">
+          <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+              <div class="item-team">
               <img
                 class="pfoto-team"
                 srcset="./images/mark-guerrero@2x.jpg 2x"
@@ -174,8 +179,11 @@
                   </li>
                 </ul>
               </div>
-            </li>
-            <li class="item-team">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="item-team">
               <img
                 class="pfoto-team"
                 srcset="./images/tom-ford@2x.jpg 2x"
@@ -226,8 +234,11 @@
                   </li>
                 </ul>
               </div>
-            </li>
-            <li class="item-team">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="item-team">
               <img
                 class="pfoto-team"
                 srcset="./images/camila-garcia@2x.jpg 2x"
@@ -286,8 +297,11 @@
                   </li>
                 </ul>
               </div>
-            </li>
-            <li class="item-team">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="item-team">
               <img
                 class="pfoto-team"
                 srcset="./images/daniel-wilson@2x.jpg 2x"
@@ -346,9 +360,14 @@
                   </li>
                 </ul>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+
+          </div>       
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
+      </div>
       </section>
 
       <section class="section portfolio">
@@ -907,5 +926,6 @@
       </div>
     </div>
     <script src="./mane.js" deferm type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
