@@ -103,30 +103,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
-  
-
-
+  // це перемикання кнопок зверху у вікні
   document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".nav-link");
   
-    // Перевіряємо, чи вже є клас "current" на одній з лінок при завантаженні сторінки
-    navLinks.forEach(link => {
+     navLinks.forEach(link => {
       if (link.classList.contains("current")) {
-        link.classList.add("current"); // Переконуємось, що клас "current" збережений
+        link.classList.add("current"); 
       }
     });
   
-    // Додаємо слухач подій на кожну лінку
     navLinks.forEach(link => {
       link.addEventListener("click", (e) => {
-        e.preventDefault(); // Скасовуємо стандартну поведінку переходу за посиланням
+        e.preventDefault(); 
   
-        // Видаляємо клас "current" з усіх лінок
-        navLinks.forEach(l => l.classList.remove("current"));
+         navLinks.forEach(l => l.classList.remove("current"));
   
-        // Додаємо клас "current" до натиснутої лінки
         link.classList.add("current");
       });
     });
   });
 
+//==================================== кнопка для прокрутки вікна===================
+
+const scrollButton = document.querySelector('.icon-arrow');
+
+function checkScrollPosition() {
+    if (window.scrollY > 100) { 
+        scrollButton.classList.add('visible');
+    } else {
+        scrollButton.classList.remove('visible');
+    }
+}
+
+window.addEventListener('scroll', checkScrollPosition);
+
+scrollButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
